@@ -1,0 +1,343 @@
+
+:root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #20283a;
+  background: #f5f7fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button, input, textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  background: white;
+  border-bottom: 1px solid #e7eaf0;
+  padding: 22px 6%;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.app-header h1 {
+  margin: 0;
+  color: #5145cd;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.app-header p {
+  margin: 5px 0 0;
+  color: #778096;
+  font-size: 14px;
+}
+
+.container {
+  width: min(1200px, 88%);
+  margin: auto;
+  padding: 38px 0;
+  flex: 1;
+}
+
+.welcome {
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  color: #6254d9;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.welcome h2 {
+  margin: 8px 0;
+  font-size: clamp(26px, 4vw, 36px);
+}
+
+.welcome > p:last-child {
+  color: #778096;
+  line-height: 1.6;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.stat-card {
+  background: white;
+  padding: 22px;
+  border: 1px solid #e8eaf1;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgb(28 39 70 / 4%);
+}
+
+.stat-card p {
+  margin: 0;
+  color: #778096;
+  font-size: 14px;
+}
+
+.stat-card h2 {
+  margin: 12px 0 0;
+  font-size: 32px;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1.5fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.form-section, .assignment-list {
+  min-width: 0;
+  background: white;
+  border: 1px solid #e8eaf1;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 16px rgb(28 39 70 / 4%);
+}
+
+.form-section h2, .assignment-list h2 {
+  margin: 0 0 22px;
+  font-size: 20px;
+}
+
+.form-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-section label {
+  margin-top: 5px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.form-section input, .form-section textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #dfe3ec;
+  border-radius: 9px;
+  background: white;
+  color: #20283a;
+  outline: none;
+}
+
+.form-section input:focus, .form-section textarea:focus {
+  border-color: #6254d9;
+  box-shadow: 0 0 0 3px rgb(98 84 217 / 10%);
+}
+
+.form-section textarea {
+  resize: vertical;
+}
+
+.primary-button {
+  margin-top: 10px;
+  border: none;
+  border-radius: 9px;
+  background: #5145cd;
+  color: white;
+  padding: 13px;
+  font-weight: 700;
+}
+
+.primary-button:hover {
+  background: #4035b5;
+}
+
+.assignment-items {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.assignment-card {
+  min-width: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px;
+  border: 1px solid #e8eaf1;
+  border-radius: 12px;
+}
+
+.assignment-info {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.subject-tag {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 6px;
+  background: #efedff;
+  color: #5145cd;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.assignment-info h3 {
+  margin: 10px 0 7px;
+}
+
+.assignment-info p {
+  margin: 6px 0;
+  color: #778096;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.status {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.status-pending {
+  background: #fff3d6;
+  color: #946200;
+}
+
+.status-completed {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.assignment-card.completed {
+  background: #f8faf9;
+}
+
+.assignment-card.completed h3 {
+  color: #778096;
+  text-decoration: line-through;
+}
+
+.assignment-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.assignment-actions button {
+  padding: 8px 10px;
+  border: 1px solid #dfe3ec;
+  border-radius: 8px;
+  background: white;
+  color: #5145cd;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.assignment-actions .delete-button {
+  color: #d13f52;
+}
+
+.empty-message {
+  padding: 30px 10px;
+  text-align: center;
+  color: #778096;
+  line-height: 1.6;
+}
+
+.app-footer {
+  padding: 22px;
+  text-align: center;
+  color: #778096;
+  font-size: 13px;
+  border-top: 1px solid #e7eaf0;
+  background: white;
+}
+
+@media (max-width: 800px) {
+  .container {
+    width: 92%;
+  }
+
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .container {
+    padding: 26px 0;
+  }
+
+  .dashboard {
+    gap: 9px;
+  }
+
+  .stat-card {
+    padding: 14px 10px;
+  }
+
+  .stat-card p {
+    font-size: 12px;
+  }
+
+  .stat-card h2 {
+    font-size: 26px;
+  }
+
+  .form-section, .assignment-list {
+    padding: 17px;
+  }
+
+  .assignment-card {
+    flex-direction: column;
+  }
+
+  .assignment-actions button {
+    padding: 9px 12px;
+  }
+}
+
+
+.cancel-button {
+  padding: 12px;
+  border: 1px solid #dfe3ec;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #5145cd;
+  font-weight: 700;
+}
+
+.cancel-button:hover {
+  background: #f5f3ff;
+}
